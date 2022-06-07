@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" id="fondonegro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <div class="grip_container">
+        <header >
+
+                <nav class="nav_fondo">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i> <img  class= "mn" src="../imagenes/menu ham.png" alt=""></i>
+                    </label>
+                    
+                <a  href="../index.html"><img class="logo" src="../imagenes/Diseño sin título.png" alt="logo"></a>  
+                      <Ul class="fixed" >
+                        <li class="link"></li><a href="../index.html">Inicio</a></li>
+                        <li class="link"></li><a href="./pelicula.html">Peliculas</a></li>
+                        <li class="link"></li><a href="../paginas/serie.html"">Serie</a></li>
+                        <li class="link"></li><a href="../paginas/genero.html">Genero</a></li>
+                        <li class="link"></li><a href="../paginas/contacto.html">Contacto</a></li>
+                    </Ul>  
+                </nav>
+        </header>
+
+        <section class="section">
+            <h3 class="contacto">Contacto</h3>
+            <article>
+                <form  class="formulario" action="" method="get" enctype="text/plain">
+                    <div>
+                        <label for="Username">Nombre y Apellido</label>
+                    </div>
+                    <input type="text"id="Username" name="Username" required>
+                <div>
+                    <label for="useremail">Email</label>
+                </div> 
+                <input type="Email"id=useremail name="useremail"required>
+               <div>
+                    Genero
+               <div>
+                   <label for="masculino">Masculino</label>
+                   <input type="radio" name="Genero" id="masculino">
+               </div>
+               <div>
+                   <label for="femenino">Femenino</label>
+                   <input type="radio" name="Genero" id="femenino">
+               </div>
+               <div>
+                   <label for="edad">Edad</label>
+                   <select name="edad" id="edad">
+                       <option value="18+">18+ años</option>
+                       <option value="12 a 18">12 a 18 años</option>
+                   </select>
+               </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                </div>
+                <textarea name="mensaje" id="mensaje" cols="60" rows="30" required></textarea>
+            </form>
+            <div>
+                <input class="btn" type="submit" value="Enviar">
+                <input class="btn" type="reset" value="Reset">
+            </div>
+            </article>
+        </section>
+
+        <footer class= "grip_footer"> 
+
+            <div class="foot"> 
+
+                <img class="piedePagina" src= "../imagenes/Diseño sin título.png"alt="logo">
+                <img class= "redesSociales"src="../imagenes/ins.jpg" alt="instagram">
+                <img class="redesSociales" src="../imagenes/facebook.jpg" alt="facebook"> 
+
+            </div> 
+        </footer>
+
+    </div>    
+
+</body>
+</html>
