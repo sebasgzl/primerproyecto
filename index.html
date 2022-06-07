@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" id="fondonegro">
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,14 +33,14 @@
             </header>
             
             <section id="section">
-                <img class="banner" src="./imagenes/banner.png" alt="banner">     
+                <img class="banner" data-aos="fade-right" src="./imagenes/banner.png" alt="banner">     
             </section>
             
            
             <section id="pelicula">
                 <article>
                     <div>
-                        <h3 class="title">Peliculas</h3>
+                        <h3 class="title bounce-top" >Peliculas</h3>
                         <a  href="./pages/pelicula.html"><img class="ancho_peliculas" src="./imagenes/peliculas ico.png" alt="Peliculas"></a>
                      </div> 
                        
@@ -56,7 +58,7 @@
             <section id="serie">
                 <article>
                     <div>
-                        <h3 class="title">Serie</h3>
+                        <h3 class="title bounce-top">Serie</h3>
                         <a  href="./pages/serie.html"><img class="ancho_serie" src="./imagenes/serie.png" alt="serie"></a>
                     </div>
                     <div class="flexbox">
@@ -79,5 +81,8 @@
                   </div> 
         </footer>
     </div>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
