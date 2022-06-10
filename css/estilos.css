@@ -34,6 +34,9 @@
         left: 10px;
         top: 10px; 
     }
+    .logo2{
+      width: 150px;
+    }
     
     ul{
         text-align: center;
@@ -88,9 +91,10 @@
        
        .contenido{
          margin: 15px;
-         width: 16rem;
-         
+         width: 16rem; 
        }
+
+
 
        .foot{
         display: flex;
