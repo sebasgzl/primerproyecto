@@ -7,9 +7,7 @@
   
 }
 
-#fondonegro{
-  background-color: black;
-}
+
   
   
   .nav_fondo{
@@ -81,6 +79,7 @@
        
        }
        
+       
      
        
        .flexbox{
@@ -122,30 +121,22 @@
      
      
        .formulario{
-         color: white;
-         font-size: 2rem;
-         background-color:rgb(63, 82, 155);
-         border: 6px solid white;
-         padding: 45px 20px 20px;
-         margin-top: 20px;
-         
-       
+         color: white;                        
        }
+
        .contacto{
-         font-size: 5rem;
+        
          font-family:'Roboto Mono', monospace;
-         font-weight: 700;
-         padding:20px 32px;
-         background-color: blue; 
-         border:6px solid white;
-         margin-top: 15px;
-       
+         font-weight: 600;    
      }
      
-     .btn{
+
+     .boton{
      font-size: 1.5rem;
-     padding: 20px;
-     border: 6px solid grey;
+     padding: 10px;
+     border: 6px solid rgb(35, 21, 194);
+     background-color: rgb(13, 0, 255);
+     color: white;
      }
 
      .checkbtn{
@@ -303,10 +294,6 @@
     left: 0;
   }
   
-  #fondonegro{
-    background-color: black;
-    
-  }
   
   .logo{
     width: 150px;
@@ -322,7 +309,7 @@
 
 
   body{
-    background-color: blueviolet;
+    background-color: rgb(87, 10, 154);
   }
   .flexbox{
     flex-wrap: wrap;

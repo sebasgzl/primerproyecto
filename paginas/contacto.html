@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es" id="fondonegro">
+<html lang="es">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,67 +9,89 @@
 </head>
 <body>
     <link rel="stylesheet" href="../css/estilos.css">
-    <div class="grip_container">
+    
         <header >
-
-                <nav class="nav_fondo">
-                    <input type="checkbox" id="check">
-                    <label for="check" class="checkbtn">
-                        <i> <img  class= "mn" src="../imagenes/menu ham.png" alt=""></i>
-                    </label>
-                    
-                <a  href="../index.html"><img class="logo" src="../imagenes/Diseño sin título.png" alt="logo"></a>  
-                      <Ul class="fixed" >
-                        <li class="link"></li><a href="../index.html">Inicio</a></li>
-                        <li class="link"></li><a href="./pelicula.html">Peliculas</a></li>
-                        <li class="link"></li><a href="../paginas/serie.html"">Serie</a></li>
-                        <li class="link"></li><a href="../paginas/genero.html">Genero</a></li>
-                        <li class="link"></li><a href="../paginas/contacto.html">Contacto</a></li>
-                    </Ul>  
-                </nav>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand img-fluid " href="../index.html"><img src="../imagenes/Diseño sin título.png" width="200" height="60" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../paginas/serie.html">Serie</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../paginas/pelicula.html">Pelicula</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../paginas/genero.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Generos
+                        </a>
+                        <ul class="dropdown-menu bg-dark navbar-dark" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item text-white " href="#">Acción</a></li>
+                          <li><a class="dropdown-item text-white " href="#">Comedia</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item text-white" href="../paginas/genero.html">Mas+</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                   
+                  </div>
+                </div>
+              </nav>
+               
+          
         </header>
 
-        <section class="section">
-            <h3 class="contacto">Contacto</h3>
+    <div class="grip_container">
+
+        <section style="height: 100vh;">
+          
             <article>
-                <form  class="formulario" action="" method="get" enctype="text/plain">
-                    <div>
-                        <label for="Username">Nombre y Apellido</label>
+                
+                <div class="container">   
+                   
+                    <div class="raw">
+                        <form class="formulario"> 
+                            <h3 class="p-3 contacto">Contacto</h3>
+                            <div class="col-mb-6 col-sm 3 d-flex flex-column align-item-center">
+                                <div class="mb-3">
+                                     <label for="nombre-text" class="form-label">Nombre y Apellido</label>
+                                     <input type="text"id="nombre-text"  placeholder="Ingresar Nombre" class="form-control" name="Username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar Email" name="Email">
+                                </div>
+                                <div class="mb-3">  
+                                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                                    <textarea  required class="form-control" id="exampleFormControlTextarea1" placeholder=" Ingresar Mensaje" name="Mensaje" rows="3"></textarea>
+
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                          </form>  
+        
+        
                     </div>
-                    <input type="text"id="Username" name="Username" required>
-                <div>
-                    <label for="useremail">Email</label>
-                </div> 
-                <input type="Email"id=useremail name="useremail"required>
-               <div>
-                    Genero
-               <div>
-                   <label for="masculino">Masculino</label>
-                   <input type="radio" name="Genero" id="masculino">
-               </div>
-               <div>
-                   <label for="femenino">Femenino</label>
-                   <input type="radio" name="Genero" id="femenino">
-               </div>
-               <div>
-                   <label for="edad">Edad</label>
-                   <select name="edad" id="edad">
-                       <option value="18+">18+ años</option>
-                       <option value="12 a 18">12 a 18 años</option>
-                   </select>
-               </div>
-                <div>
-                    <label for="mensaje">Mensaje</label>
+        
                 </div>
-                <textarea name="mensaje" id="mensaje" cols="60" rows="30" required></textarea>
-            </form>
-            <div>
-                <input class="btn" type="submit" value="Enviar">
-                <input class="btn" type="reset" value="Reset">
-            </div>
             </article>
         </section>
 
+
+
+
+
+          
         <footer class= "grip_footer"> 
 
             <div class="foot"> 
@@ -82,5 +105,7 @@
 
     </div>    
 
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
