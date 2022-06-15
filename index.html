@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pelimax</title>
 </head>
-<body >
+<body>
     <link rel="stylesheet" href="./css/estilos.css">
-                <header>
-                  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+           <div class="grip_container " >
+               <header>
+                  <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
                     <div class="container-fluid">
                         <a class="navbar-brand " href="./index.html"><img src="../imagenes/Diseño sin título.png" width="200" height="60" alt=""></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,18 +48,26 @@
              
                     </header>
                     <section id="section">
-                        <img class="banner" src="./imagenes/banner.png" alt="banner">     
+                        
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="./imagenes/banner.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="./imagenes/BIENVENIDO.png" class="d-block w-100" alt="...">
+                            </div>
+                            
+                          </div>
+                        </div>
+                        
                     </section>
-                    <div class="container-fluid">
-                        <div class="row justify-content-start-beween">
-                             <div class="col-12">
                                  <section id="pelicula">
                                      <article>
                                          <div>
-                                             <h3 class="title bounce-top" >Peliculas</h3>
+                                             <h3 class="title" >Peliculas</h3>
                                              <a  href="./pages/pelicula.html"><img class="ancho_peliculas" src="./imagenes/peliculas ico.png" alt="Peliculas"></a>
-                                          </div> 
-                                          
+                                          </div>                                       
                                                       <div class="flexbox">
                                                              <a  href=""><img class="contenido" src="./imagenes/peliculas/los-vengadores-2-la-era-de-ultron.jpg" alt="los vengadores 2"></a> 
                                                              <a href=""><img class="contenido" src="./imagenes/peliculas/Push.jpg" alt="push"></a> 
@@ -66,14 +75,14 @@
                                                               <a href=""><img class="contenido" src="./imagenes/peliculas/exodus.jpg" alt="exodus"></a> 
                                                       </div>   
                                                          </article>                  
-                                 </section>
-                               </div>
-                               <div class="col-12">
+                                                </section>
+                               
+                               
        
                                    <section id="serie">
-                                       <article>
-                                           <div>
-                                               <h3 class="title bounce-top">Serie</h3>
+                                       <article>  
+                                            <div>                                      
+                                               <h3 class="title">Serie</h3>
                                                <a  href="./pages/serie.html"><img class="ancho_serie" src="./imagenes/serie.png" alt="serie"></a>
                                            </div>
                                            <div class="flexbox">
@@ -84,24 +93,25 @@
                                            </div>
                                        </article>
                                    </section>
-                     
-                               </div>
-                            </div>
-                            
-                  
-   
-        
-        <footer> 
+                                   <footer class= "grip_footer"> 
+                                   <div class="foot"> 
+                                        <img class="piedePagina" src= "../imagenes/Diseño sin título.png"alt="logo">
+                                        <img class= "redesSociales"src="../imagenes/ins.jpg" alt="instagram">
+                                        <img class="redesSociales" src="../imagenes/facebook.jpg" alt="facebook"> 
+                                        </div>
+                                   </footer>
+              </div>  
 
-                  <div class="foot"> 
-
-                      <img class="piedePagina" src= "./imagenes/Diseño sin título.png"alt="logo">
-                      <img class= "redesSociales"src="./imagenes/ins.jpg" alt="instagram">
-                      <img class="redesSociales" src="./imagenes/facebook.jpg" alt="facebook"> 
-
-                  </div> 
-        </footer>
-    
+                               
+              
+                    
+                    
+                    
+                    
+                    
+                           
+                                                 
+             
     <script>
         AOS.init();
       </script>
