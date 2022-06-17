@@ -1,0 +1,114 @@
+section#serie {
+  grid-area: serie; }
+  section#serie .title {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: 30px 20px;
+    position: relative;
+    display: inline-block; }
+  section#serie .ancho_serie {
+    width: 100px;
+    float: left; }
+  section#serie .flexbox {
+    display: flex;
+    justify-content: space-around; }
+    section#serie .flexbox .contenido {
+      margin: 15px;
+      width: 16rem; }
+
+section#pelicula .title {
+  color: white;
+  font-size: 2.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  padding: 30px 20px;
+  position: relative;
+  display: inline-block; }
+
+section#pelicula .ancho_peliculas {
+  width: 100px;
+  float: left; }
+
+section#pelicula .flexbox {
+  display: flex;
+  justify-content: space-around; }
+  section#pelicula .flexbox .contenido {
+    margin: 15px;
+    width: 16rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.grip_footer {
+  grid-area: footer; }
+  .grip_footer .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background-color: gray; }
+    .grip_footer .foot .piedePagina {
+      width: 300px; }
+    .grip_footer .foot .redesSociales {
+      padding-left: 20px; }
+
+/*telefonos*/
+@media screen and (max-width: 480px) {
+  body {
+    background-color: aqua; }
+  .flexbox {
+    flex-direction: column; }
+  #pelicula article div,
+  #serie article div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #pelicula article div .title,
+  #serie article div .title {
+    display: none; }
+  .grip_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" " section" "serie" "pelicula" "footer"; }
+  .li_genero {
+    display: block;
+    padding: 20px;
+    margin: 20px 20px;
+    background-color: #147bb8;
+    position: inherit; }
+  .checkbtn {
+    display: block; }
+  .fixed {
+    position: fixed;
+    width: 100%;
+    height: 30vh;
+    background: grey;
+    top: 80px;
+    left: -100%;
+    text-align: center; }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px; }
+  #check:checked ~ ul {
+    left: 0; }
+  .logo {
+    width: 150px; }
+  .piedePagina {
+    width: 200px; } }
+
+/*tabletas*/
+@media screen and (min-width: 480px) {
+  body {
+    background-color: blueviolet; }
+  .flexbox {
+    flex-wrap: wrap; }
+  .grip_container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" " section" "serie" "pelicula" "footer"; } }
