@@ -6,20 +6,18 @@
   section#serie{
     grid-area: serie;
 
-.title{
-    color: white;
+.title_serie{ 
+    color: $blanco;
     font-size: 2.5rem;
     font-family: 'Roboto Mono', monospace;
     font-weight:400 ; 
     padding: 30px 20px;
     position: relative;
     display: inline-block;
-
   }
   
-  .ancho_serie{
-    width: 100px;
-    float: left;
+ .ancho_serie{   
+   @include ancho_serie
    }
   
    .flexbox{

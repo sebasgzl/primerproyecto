@@ -3,20 +3,20 @@
 
 section#pelicula{
  
-  .title{
-      color: white;
+  .title_pelicula{
+      
       font-size: 2.5rem;
       font-family: 'Roboto Mono', monospace;
       font-weight:400 ; 
       padding: 30px 20px;
       position: relative;
-      display: inline-block;
-      
+      display: inline-block;     
       
     }
     .ancho_peliculas{
-      width: 100px;
+      width:$ancho/2 ;
       float: left;
+      margin: 5px;
     }
     
     .flexbox{
@@ -30,6 +30,7 @@ section#pelicula{
     }
     
 }
+
 
 
 

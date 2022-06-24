@@ -1,0 +1,27 @@
+
+$blanco:#ffffff;
+$ancho: 200px;
+$margin:5px;
+
+
+@mixin ancho_serie {
+    margin: $margin;
+    width: $ancho/2;
+    float: left;
+}
+
+$estilos: (
+  color: #3673D9,
+  centro: center
+);
+
+ .title_pelicula {
+  background-color: map-get($estilos, color);
+  text-align: map-get($estilos, centro);
+  padding: 1rem;
+  color: white;
+}
+  
+  
+  
+  
