@@ -56,7 +56,7 @@ section#pelicula .peliculas_contenido {
     background-color: #202047;
     overflow: hidden;
     display: flex;
-    justify-items: center;
+    align-items: center;
     justify-content: center; }
     section#pelicula .peliculas_contenido .peliculas_items .peliculas_img {
       display: block;
