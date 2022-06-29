@@ -22,6 +22,9 @@ $estilos: (
   color: white;
 }
   
+.title_serie{
+  @extend .title_pelicula;
+}
   
   
   

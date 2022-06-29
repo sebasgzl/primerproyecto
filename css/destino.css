@@ -1,12 +1,12 @@
-.title_pelicula {
+* {
+  margin: 0;
+  padding: 0; }
+
+.title_pelicula, .title_serie {
   background-color: #3673D9;
   text-align: center;
   padding: 1rem;
   color: white; }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 section#serie {
   grid-area: serie; }
@@ -29,7 +29,7 @@ section#serie {
       margin: 15px;
       width: 16rem; }
 
-section#pelicula .title_pelicula {
+section#pelicula .title_pelicula, section#pelicula .title_serie {
   font-size: 2.5rem;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
@@ -42,12 +42,41 @@ section#pelicula .ancho_peliculas {
   float: left;
   margin: 5px; }
 
-section#pelicula .flexbox {
-  display: flex;
-  justify-content: space-around; }
-  section#pelicula .flexbox .contenido {
-    margin: 15px;
-    width: 16rem; }
+section#pelicula .peliculas_contenido {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 0.2fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-items: center;
+  justify-content: center; }
+  section#pelicula .peliculas_contenido .peliculas_items {
+    width: 200px;
+    height: 300px;
+    max-width: 800px;
+    background-color: #202047;
+    overflow: hidden; }
+    section#pelicula .peliculas_contenido .peliculas_items .peliculas_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s; }
+
+/* efecto hover*/
+.peliculas_items::before {
+  content: url("../imagenes/boton-de-reproduccion.png");
+  position: absolute;
+  transform: scale(0.2);
+  opacity: 0; }
+
+.peliculas_items:hover .peliculas_img {
+  transform: scale(1.2);
+  filter: blur(3px);
+  opacity: 0.4; }
+
+.peliculas_items:hover:before {
+  opacity: 1; }
 
 .btn_enviar, .btn_reset {
   font-size: 1.5rem;
@@ -86,6 +115,11 @@ section#pelicula .flexbox {
 
 /*telefonos*/
 @media screen and (max-width: 480px) {
+  .peliculas_contenido {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 0.3fr);
+    row-gap: 5rem; }
   body {
     background-color: aqua; }
   .flexbox {
@@ -109,22 +143,10 @@ section#pelicula .flexbox {
     margin: 20px 20px;
     background-color: #147bb8;
     position: inherit; }
-  .checkbtn {
-    display: block; }
-  .fixed {
-    position: fixed;
-    width: 100%;
-    height: 30vh;
-    background: grey;
-    top: 80px;
-    left: -100%;
-    text-align: center; }
   nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px; }
-  #check:checked ~ ul {
-    left: 0; }
   .logo {
     width: 150px; }
   .piedePagina {
@@ -134,6 +156,14 @@ section#pelicula .flexbox {
 @media screen and (min-width: 480px) {
   body {
     background-color: blueviolet; }
+  .peliculas_contenido {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 0.3fr);
+    justify-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 2rem; }
   .flexbox {
     flex-wrap: wrap; }
   .grip_container {
