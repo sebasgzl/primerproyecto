@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 .title_pelicula, .title_serie {
   background-color: #3673D9;
@@ -47,15 +48,16 @@ section#pelicula .peliculas_contenido {
   width: 100%;
   grid-template-columns: repeat(4, 0.2fr);
   column-gap: 2rem;
-  row-gap: 2rem;
-  justify-items: center;
-  justify-content: center; }
+  row-gap: 2rem; }
   section#pelicula .peliculas_contenido .peliculas_items {
     width: 200px;
     height: 300px;
     max-width: 800px;
     background-color: #202047;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-items: center;
+    justify-content: center; }
     section#pelicula .peliculas_contenido .peliculas_items .peliculas_img {
       display: block;
       width: 100%;

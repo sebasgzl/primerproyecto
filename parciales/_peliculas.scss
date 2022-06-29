@@ -24,8 +24,7 @@ section#pelicula{
       grid-template-columns: repeat(4, 0.2fr); 
       column-gap: 2rem;
       row-gap: 2rem;
-      justify-items: center;
-      justify-content: center;
+      
 
       .peliculas_items{
         width: 200px;
@@ -33,7 +32,9 @@ section#pelicula{
         max-width: 800px;
         background-color: rgb(32, 32, 71);
        overflow: hidden;
-      
+       display: flex;
+       justify-items: center;
+       justify-content: center;
         
         .peliculas_img{
           display: block;
