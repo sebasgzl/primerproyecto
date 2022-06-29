@@ -1,8 +1,8 @@
 
 
-section#pelicula{
+.peliculas{
  
-  .title_pelicula{
+  .peliculas_title{
       
       font-size: 2.5rem;
       font-family: 'Roboto Mono', monospace;
@@ -12,7 +12,7 @@ section#pelicula{
       display: inline-block;     
       
     }
-    .ancho_peliculas{
+    .peliculas_ancho{
       width:$ancho/2 ;
       float: left;
       margin: 5px;
@@ -21,7 +21,6 @@ section#pelicula{
     .peliculas_contenido{
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(4, 0.2fr); 
       column-gap: 2rem;
       row-gap: 2rem;
       

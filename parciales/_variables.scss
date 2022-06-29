@@ -15,15 +15,15 @@ $estilos: (
   centro: center
 );
 
- .title_pelicula {
+ .peliculas_title{
   background-color: map-get($estilos, color);
   text-align: map-get($estilos, centro);
   padding: 1rem;
   color: white;
 }
   
-.title_serie{
-  @extend .title_pelicula;
+.serie_title{
+  @extend .peliculas_title;
 }
   
   

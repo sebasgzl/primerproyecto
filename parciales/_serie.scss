@@ -1,33 +1,70 @@
-
-
-
- section#serie{
+.serie {
   grid-area: serie;
 
-.title_serie{ 
-  color: $blanco;
-  font-size: 2.5rem;
-  font-family: 'Roboto Mono', monospace;
-  font-weight:400 ; 
-  padding: 30px 20px;
-  position: relative;
-  display: inline-block;
+  .serie_title {
+    color: $blanco;
+    font-size: 2.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: 30px 20px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .serie_ancho {
+    @include ancho_serie
+  }
+
+  .serie_contenido {
+    display: grid;
+    width: 100%;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    .serie_items {
+      width: 200px;
+      height: 300px;
+      max-width: 800px;
+      background-color: rgb(32, 32, 71);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+    }
+
+    .serie_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all.5s;
+
+
+    }
+
+  }
+
 }
 
-.ancho_serie{   
- @include ancho_serie
- }
+/*efecto hover*/
 
- .flexbox{
-  display: flex;
-  justify-content: space-around;
- 
-  .contenido{
-  margin: 15px;
-  width: 16rem; 
+.serie_items::before {
+  content: url("../imagenes/boton-de-reproduccion.png");
+  position: absolute;
+  transform: scale(0.2);
+  opacity: 0;
 }
 
+.serie_items:hover .serie_img {
+  transform: scale(1.2);
+  filter: blur(3px);
+  opacity: 0.4;
 }
+
+.serie_items:hover:before {
+  opacity: 1;
 
 
 }
