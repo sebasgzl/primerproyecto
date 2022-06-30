@@ -160,6 +160,9 @@
     justify-content: center; }
   body {
     background-color: aqua; }
+  .peliculas article div .peliculas_title, .peliculas article div .serie_title,
+  .serie article div .serie_title {
+    display: none; }
   .grip_container {
     display: grid;
     grid-template-columns: 1fr;
@@ -171,10 +174,6 @@
     margin: 20px 20px;
     background-color: #147bb8;
     position: inherit; }
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px; }
   .logo {
     width: 150px; }
   .piedePagina {
@@ -187,7 +186,7 @@
   .peliculas_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 0.1fr);
+    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
@@ -195,7 +194,7 @@
   .serie_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 0.1fr);
+    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
