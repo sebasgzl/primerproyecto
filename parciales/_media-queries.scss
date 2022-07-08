@@ -1,25 +1,47 @@
 
+section#section {
+  grid-area: section;
+}
+
+
+
+.grip_container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header"
+    " section"
+    "peliculas"
+    "serie"
+    "footer";
+
+}
+
+
+
+
 /*telefonos*/
 @media screen and (max-width: 480px) {
   .peliculas_contenido{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
-    row-gap: 5rem; 
-  }
-
-  .serie_contenido{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
     justify-content: center;
   }
 
+  .serie_contenido{
+    display: grid;
+    width: 100%;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-items: center;
+    justify-content: center;
+  }
+  
   body {
-    background-color: aqua;
+    background-color: #d62828;
   }
 
   .peliculas article div .peliculas_title,
@@ -28,18 +50,14 @@
   }
 
  
-
-
-
-
   .grip_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: "header"
       " section"
+      "peliculas"
       "serie"
-      "pelicula"
       "footer";
   }
 
@@ -56,9 +74,10 @@
     width: 150px;
   }
 
-  .piedePagina {
-    width: 150px;
+   .redesSociales{
+    width: 50px;
   }
+
 }
 
 /*tabletas*/
@@ -66,13 +85,12 @@
 @media screen and (min-width: 480px) {
 
   body {
-    background-color: blueviolet;
+    background-color: #d62828;
   }
 
   .peliculas_contenido{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
@@ -82,14 +100,11 @@
   .serie_contenido{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
     justify-content: center;
   }
-
-
 
 
   .grip_container {

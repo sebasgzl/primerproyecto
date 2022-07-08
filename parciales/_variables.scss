@@ -8,6 +8,7 @@ $margin:5px;
     margin: $margin;
     width: $ancho/2;
     float: left;
+    
 }
 
 $estilos: (
@@ -26,5 +27,13 @@ $estilos: (
   @extend .peliculas_title;
 }
   
-  
-  
+ul{
+  text-align: center;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: rgb(19, 18, 18);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}

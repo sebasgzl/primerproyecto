@@ -9,6 +9,16 @@
   padding: 1rem;
   color: white; }
 
+ul {
+  text-align: center;
+  font-size: 20px; }
+
+a {
+  text-decoration: none;
+  color: #131212;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400; }
+
 .serie {
   grid-area: serie; }
   .serie .serie_title {
@@ -26,8 +36,10 @@
   .serie .serie_contenido {
     display: grid;
     width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     column-gap: 2rem;
-    row-gap: 2rem; }
+    row-gap: 2rem;
+    padding: 20px; }
     .serie .serie_contenido .serie_items {
       width: 200px;
       height: 300px;
@@ -59,39 +71,41 @@
 .serie_items:hover:before {
   opacity: 1; }
 
-.peliculas .peliculas_title, .peliculas .serie_title {
-  font-size: 2.5rem;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
-  padding: 30px 20px;
-  position: relative;
-  display: inline-block; }
-
-.peliculas .peliculas_ancho {
-  width: 100px;
-  float: left;
-  margin: 5px; }
-
-.peliculas .peliculas_contenido {
-  display: grid;
-  width: 100%;
-  column-gap: 2rem;
-  row-gap: 2rem; }
-  .peliculas .peliculas_contenido .peliculas_items {
-    width: 200px;
-    height: 300px;
-    max-width: 800px;
-    background-color: #202047;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .peliculas .peliculas_contenido .peliculas_items .peliculas_img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.5s; }
+.peliculas {
+  grid-area: peliculas; }
+  .peliculas .peliculas_title, .peliculas .serie_title {
+    font-size: 2.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: 30px 20px;
+    position: relative;
+    display: inline-block; }
+  .peliculas .peliculas_ancho {
+    margin: 5px;
+    width: 100px;
+    float: left; }
+  .peliculas .peliculas_contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 20px; }
+    .peliculas .peliculas_contenido .peliculas_items {
+      width: 200px;
+      height: 300px;
+      max-width: 800px;
+      background-color: #202047;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .peliculas .peliculas_contenido .peliculas_items .peliculas_img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s; }
 
 /* efecto hover*/
 .peliculas_items::before {
@@ -130,6 +144,19 @@
   border: 6px solid white;
   margin-top: 15px; }
 
+section#section {
+  grid-area: section; }
+  section#section .li_genero {
+    display: block;
+    padding: 20px;
+    margin: 20px 20px;
+    background-color: #147bb8;
+    position: relative;
+    left: 40 px;
+    top: 40px; }
+    section#section .li_genero .ancho_genero {
+      color: #740b0b; }
+
 .grip_footer {
   grid-area: footer; }
   .grip_footer .foot {
@@ -137,29 +164,39 @@
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    background-color: gray; }
+    background-color: #daff7d; }
     .grip_footer .foot .piedePagina {
-      width: 300px; }
+      width: 200px; }
     .grip_footer .foot .redesSociales {
       padding-left: 20px; }
+
+section#section {
+  grid-area: section; }
+
+.grip_container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" " section" "peliculas" "serie" "footer"; }
 
 /*telefonos*/
 @media screen and (max-width: 480px) {
   .peliculas_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
-    row-gap: 5rem; }
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-items: center;
+    justify-content: center; }
   .serie_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
     justify-content: center; }
   body {
-    background-color: aqua; }
+    background-color: #d62828; }
   .peliculas article div .peliculas_title, .peliculas article div .serie_title,
   .serie article div .serie_title {
     display: none; }
@@ -167,7 +204,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "header" " section" "serie" "pelicula" "footer"; }
+    grid-template-areas: "header" " section" "peliculas" "serie" "footer"; }
   .li_genero {
     display: block;
     padding: 20px;
@@ -176,17 +213,16 @@
     position: inherit; }
   .logo {
     width: 150px; }
-  .piedePagina {
-    width: 150px; } }
+  .redesSociales {
+    width: 50px; } }
 
 /*tabletas*/
 @media screen and (min-width: 480px) {
   body {
-    background-color: blueviolet; }
+    background-color: #d62828; }
   .peliculas_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;
@@ -194,7 +230,6 @@
   .serie_contenido {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 0.1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     justify-items: center;

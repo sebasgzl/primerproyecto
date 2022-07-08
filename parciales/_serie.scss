@@ -18,8 +18,10 @@
   .serie_contenido {
     display: grid;
     width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     column-gap: 2rem;
     row-gap: 2rem;
+    padding: 20px;
 
     .serie_items {
       width: 200px;
