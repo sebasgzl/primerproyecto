@@ -1,7 +1,7 @@
 .serie {
   grid-area: serie;
 
-  .serie_title {
+   &_title {
     color: $blanco;
     font-size: 2.5rem;
     font-family: 'Roboto Mono', monospace;
@@ -11,11 +11,11 @@
     display: inline-block;
   }
 
-  .serie_ancho {
+   &_ancho {
     @include ancho_serie
   }
 
-  .serie_contenido {
+   &_contenido {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -23,7 +23,7 @@
     row-gap: 2rem;
     padding: 20px;
 
-    .serie_items {
+      .serie_items {
       width: 200px;
       height: 300px;
       max-width: 800px;
@@ -36,7 +36,7 @@
 
     }
 
-    .serie_img {
+     .serie_img {
       display: block;
       width: 100%;
       height: 100%;
