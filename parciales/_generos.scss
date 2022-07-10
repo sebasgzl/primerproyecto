@@ -1,7 +1,6 @@
-
 section#section {
     grid-area: section;
-    
+
     .li_genero {
         display: block;
         padding: 20px;
@@ -10,11 +9,9 @@ section#section {
         position: relative;
         left: 40 px;
         top: 40px;
+
         .ancho_genero {
             color: rgb(0, 0, 0);
-          }
-      }
-  }
-
-
-  
+        }
+    }
+}

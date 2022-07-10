@@ -1,25 +1,23 @@
+.grip_footer {
+  grid-area: footer;
 
- .grip_footer{
-    grid-area: footer;
-    .foot{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: auto;
-       background-color: #daff7d;
+  .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background-color: #daff7d;
 
-       .piedePagina{
-        width:200px;
-      }
-     
-      .redesSociales{  
-        padding-left: 20px;
-  
-       
-       }
+    .piedePagina {
+      width: 200px;
+    }
 
-       }
+    .redesSociales {
+      padding-left: 20px;
+
+
+    }
 
   }
 
-  
+}

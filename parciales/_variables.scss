@@ -1,14 +1,13 @@
-
-$blanco:#ffffff;
+$blanco: #ffffff;
 $ancho: 200px;
-$margin:5px;
+$margin: 5px;
 
 
 @mixin ancho_serie {
-    margin: $margin;
-    width: $ancho/2;
-    float: left;
-    
+  margin: $margin;
+  width: $ancho/2;
+  float: left;
+
 }
 
 $estilos: (
@@ -16,23 +15,24 @@ $estilos: (
   centro: center
 );
 
- .peliculas_title{
+.peliculas_title {
   background-color: map-get($estilos, color);
   text-align: map-get($estilos, centro);
   padding: 1rem;
   color: white;
 }
-  
-.serie_title{
+
+.serie_title {
   @extend .peliculas_title;
 }
-  
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
 
-ul{
+ul {
   text-align: center;
   font-size: 20px;
 }
+
 a {
   text-decoration: none;
   color: rgb(19, 18, 18);
