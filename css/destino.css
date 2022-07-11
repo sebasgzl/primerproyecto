@@ -171,12 +171,6 @@ section#section {
     .grip_footer .foot .redesSociales {
       padding-left: 20px; }
 
-.grip_container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" " section" "peliculas" "serie" "footer"; }
-
 /*telefonos*/
 @media screen and (max-width: 480px) {
   .peliculas_contenido {
@@ -196,7 +190,8 @@ section#section {
   body {
     background-color: #d62828; }
   .peliculas article div .peliculas_title, .peliculas article div .serie_title,
-  .serie article div .serie_title {
+  .serie article div .serie_title,
+  style {
     display: none; }
   .grip_container {
     display: grid;
